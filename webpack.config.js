@@ -24,12 +24,15 @@ module.exports = {
                   options: {
                     esModule: false,
                     name (file) {
-                      return "[path][name].[ext]"
+                      return "[path][name].[ext]";
                     },
                     publicPath: function(url) {
-                      return url.replace("../", "/assets/")
+                      return url.replace("../", "/assets/");
                     }
                   }  
+                },
+                {
+                    loader: 'image-webpack-loader' 
                 }
               ]
             }
